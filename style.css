@@ -36,8 +36,8 @@ background-color:#c0d8ec;
 }
 .item{
     
-    height:80px;
-    width:80px;
+    height:12vh;
+    width:12vh;
     background-color:white;
     display:flex;
     justify-content:center;
