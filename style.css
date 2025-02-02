@@ -1,73 +1,114 @@
-*{
-    margin:0;
-    border:0;
-
-}
-body{
-background-color:#c0d8ec;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-   
-.navbar1{
-    height:80px;
-    width:100%;
+body {
+    background-color: #c0d8ec;
+}
+
+/* NAVBAR */
+.navbar1 {
+    height: 10vh;  /* Scales with viewport height */
+    width: 100%;
     background-color: lightpink;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
-    
-
 }
-.icon{
-    height:100%;
-    width:100%;
+
+/* ICON CONTAINER */
+.icon {
+    height: 100%;
+    width: 100%;
     background-color: white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between items */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
 
-    
-    
+/* ITEMS */
+.item {
+    height: 10vh; /* Adjusts to screen height */
+    width: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem; /* Responsive font size */
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.7s ease, color 0.7s ease;
+}
 
+/* ACTIVE STATES */
+.active, .active2, .active3, .active4 {
+    transform: translateY(-30px);
+    transition: transform 0.7s ease, color 0.7s ease;
 }
-.item{
-    
-    height:12vh;
-    width:12vh;
-    background-color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-   border-radius:50%;
-   font-size:30px;
-   cursor:pointer;
-    margin:20px;
-    
-}
-.active{
-    transform:translateY(-30px);
-    transition:0.9s ease;
-    color:#1fa8f5
-    
-}
-.active2{
-    transform:translateY(-30px);
-    transition:0.9s ease;
-    
-    color:red;
-}
-.active3{
-    transform:translateY(-30px);
-    transition:0.9s ease;
-    color:#47e6a4;
-}
-.active4{
-    transform:translateY(-30px);
-    transition:0.9s ease;
-    color:#34279c;
 
+.active { color: #1fa8f5; }
+.active2 { color: red; }
+.active3 { color: #47e6a4; }
+.active4 { color: #34279c; }
+
+/* 🔹 RESPONSIVE DESIGN */
+
+/* 📱 Small Screens (Phones) */
+@media (max-width: 600px) {
+    .navbar1 {
+        height: 12vh;  /* Increase height for better spacing */
+    }
+
+    .icon {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .item {
+        height: 9vh;
+        width: 9vh;
+        font-size: 1.8rem;
+    }
+}
+
+/* 💻 Medium Screens (Tablets) */
+@media (max-width: 900px) {
+    .navbar1 {
+        height: 11vh;
+    }
+
+    .icon {
+        gap: 12px;
+    }
+
+    .item {
+        height: 10vh;
+        width: 10vh;
+        font-size: 2rem;
+    }
+}
+
+/* 🖥 Large Screens (Desktops) */
+@media (min-width: 1200px) {
+    .navbar1 {
+        height: 8vh;
+    }
+
+    .icon {
+        gap: 20px;
+    }
+
+    .item {
+        height: 11vh;
+        width: 11vh;
+        font-size: 2.2rem;
+    }
 }
